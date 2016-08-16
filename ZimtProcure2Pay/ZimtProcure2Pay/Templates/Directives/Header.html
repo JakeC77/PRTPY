@@ -1,0 +1,39 @@
+﻿<div style="position:fixed; width:100%;height:46px;padding: 0px 0px 0 0px;z-index:1000">
+    <div style="width:100%;background-color:#0172C5;height:100%;color:white;float:left">
+        <div style="float:left;width:35%">
+            <span class="glyphicon glyphicon-th" aria-hidden="true" style="font-size:1.5em;border-right:1px solid #ffffff;padding:5px"></span><img class="" src="/Images/logo.png" style="height:35px;margin-top:-8px;margin-left:20px" />
+        </div><div style="width:30%;float:left">
+            <h3 style="margin:0px;width:100%;text-align:center;padding:5px;font-size:1.5em;" class="">{{headername}}</h3>
+            <h5 style="margin:0px;width:100%;text-align:center;padding:5px;font-size:.9em;" class="">{{headername}}</h5>
+
+        </div>
+        <div style="width:35%;float:right;text-align:right">
+            <img ng-click="nintexClick()" src="/Resources/Images/Nintex.png" class="" style="width:30px;height:20px;margin-top:-5px" />
+            <img ng-click="salesForceClick()" src="/Resources/Images/Salesforce.png" style="width:30px;height:20px;margin-top:-5px" />
+            <i title="View Yammer Feed" class="fa fa-users boldHover" ng-click="socialClick()" style="font-size:1.5em;padding:5px"></i>
+            <i title="View Help Documentation" onclick="zE.activate();" class="boldHover fa fa-question-circle" style="font-size:1.5em;padding:5px 8px 5px 8px"></i>
+            <i class="fa fa-refresh hidden-sm hidden-xs" style="font-size:1.5em;padding:5px 8px 5px 8px"></i>
+            <i ng-click="settingsClick()" class="fa fa-cog" style="font-size:1.5em;padding:5px 8px 5px 8px"></i>
+
+            <h6 class="" style="float:right;padding:5px; padding-top:10px;margin:0px"><login-info></login-info></h6>
+        </div>
+    </div>
+    <div style="width:75%;float:left">
+        <div style="background-color:#F9FFFF;float:left;padding:2px 0px 2px 5px;width:100%;height:20px">
+            <h5 style="margin:0px;float:left"><a href="#/main    "><i class="fa fa-home"></i></a></h5>
+            <span style="float:left" ng-repeat="crumb in breadcrumb">
+                <span style="float:left;padding:0px 15px 0px 15px">/</span><h5 style="margin:0px;float:left "><a href="{{crumb.link}}">{{crumb.title}}</a></h5>
+            </span>
+        </div>
+        <div style="background-color:#D4D9DD;width:100%;float:left;padding:2px 5px 2px 5px;height:34px">
+            <h5 style="float:left;margin:0px;padding-top:8px">Mode: {{mode}}</h5>
+            <div style="float:right"><button ng-if="showSubmit" class="btn btn-sm btn-primary" ng-click="onSubmit()" style="margin-right:5px">Submit</button><button ng-click="onCancel()" style="margin-right:5px" class="btn  btn-sm btn-primary" ng-if="showCancel">Done</button><button ng-if="showEdit" class="btn  btn-sm btn-primary">Edit</button></div>
+        </div>
+    </div>
+    <div style="width:25%;height:54px;float:right;background-color:#D4D9DC;padding:5px">
+        <div style="width:100%;height:100%;float:right;background-image:url('{{logoUrl}}');background-size:contain;background-position:right;background-repeat:no-repeat">
+
+        </div>
+    </div>
+
+</div>

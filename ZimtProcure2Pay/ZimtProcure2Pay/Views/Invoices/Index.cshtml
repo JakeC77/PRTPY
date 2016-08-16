@@ -1,0 +1,75 @@
+﻿@model IEnumerable<ZimtProcure2Pay.Models.Invoice>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UniversalID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RefNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vendor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CostObjectType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CostObject)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequisitionerID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UniversalID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RefNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Amount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedOn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vendor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CostObjectType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CostObject)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequisitionerID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.InvoiceID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.InvoiceID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.InvoiceID })
+        </td>
+    </tr>
+}
+
+</table>

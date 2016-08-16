@@ -1,0 +1,88 @@
+﻿@model ZimtProcure2Pay.Models.Invoice
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Invoice</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UniversalID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UniversalID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RefNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RefNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vendor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vendor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CostObjectType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CostObjectType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CostObject)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CostObject)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequisitionerID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequisitionerID)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,82 @@
+﻿@model ZimtProcure2Pay.Models.Invoice
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Invoice</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UniversalID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UniversalID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RefNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RefNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vendor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vendor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CostObjectType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CostObjectType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CostObject)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CostObject)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequisitionerID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequisitionerID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.InvoiceID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
